@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İletişim | VeriPusula Analitik A.Ş.</title>
+<meta name="description" content="VeriPusula Analitik A.Ş. iletişim bilgileri ve mesaj formu.">
+<script>try{var t=localStorage.getItem('tema')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+<script src="iletisim.js" defer></script>
+</head>
+<body>
+
+<section class="page-hero"><div class="container"><h1>İletişim</h1><p>Tedarik, iş birliği veya sorularınız için bize yazın.</p></div></section>
+<section><div class="container split" style="align-items:start">
+  <div class="grid">
+    <div class="card reveal"><div class="ico">📧</div><h3>E-posta</h3><p><a href="mailto:info@veripusula.example">info@veripusula.example</a></p></div>
+    <div class="card reveal"><div class="ico">📞</div><h3>Telefon</h3><p>+90 850 000 00 00 </p></div>
+    <div class="card reveal"><div class="ico">📍</div><h3>Adres</h3><p> Teknoloji Geliştirme Bölgesi, Düzce Ofis Blok A, Kat 3 </p></div>
+    <figure class="foto" data-label="İLETİŞİM GÖRSELİ – images/iletisim.jpg (1200×800)"><img src="iletisim.jpg" alt="Ofis" onerror="this.remove()"></figure>
+  </div>
+  <form class="card reveal" id="iletisimForm" novalidate>
+    <h3 style="margin:0">Bize Yazın</h3>
+    <div><label for="ad">Ad Soyad</label><input id="ad" name="ad" type="text" required maxlength="80" autocomplete="name"></div>
+    <div><label for="eposta">E-posta</label><input id="eposta" name="eposta" type="email" required maxlength="120" autocomplete="email"></div>
+    <div><label for="mesaj">Mesajınız</label><textarea id="mesaj" name="mesaj" rows="5" required maxlength="1000"></textarea></div>
+    <button class="btn btn-solid" type="submit">Gönder</button><p class="msg" id="formMsg" role="status"></p>
+  </form>
+</div></section>
+
+</body>
+</html>

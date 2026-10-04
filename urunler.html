@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ürünler | VeriPusula Analitik A.Ş.</title>
+<meta name="description" content="Müşteri Analitiği Lisansı, SmartBox ve canlı stok takibi.">
+<script>try{var t=localStorage.getItem('tema')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+<script src="stok.js" defer></script>
+</head>
+<body>
+
+<section class="page-hero"><div class="container"><h1>Ürünlerimiz</h1><p>Uzmanlık ürünümüz, nihai ürünümüz ve canlı stok durumumuz.</p></div></section>
+
+<section><div class="container">
+  <div class="grid g2">
+    <article class="card card-img reveal"><figure class="foto" data-label="ÜRÜN GÖRSELİ – urun-lisans.jpg (1200×750)"><img src="urun-lisans.jpg" alt="Müşteri Analitiği Lisansı" onerror="this.remove()"></figure>
+      <div class="body"><h3>Müşteri Analitiği Lisansı</h3><p>SmartBox reçetesindeki uzmanlık bileşenimiz. Her SmartBox için 1 adet gerekir.</p>
+      <ul><li>Üretim maliyeti: 50 TL/adet</li><li>B2B fiyat aralığı: 50–75 TL/adet (Fiyat pazarda bulunan tedarik ürün fiyatına göre güncellenmektedir.)</li></ul></div></article>
+    <article class="card card-img reveal"><figure class="foto" data-label="ÜRÜN GÖRSELİ – urun-smartbox.jpg (1200×750)"><img src="urun-smartbox.jpg" alt="SmartBox" onerror="this.remove()"></figure>
+      <div class="body"><h3>SmartBox</h3><p>Sekiz bileşenin birleşiminden oluşan nihai ürünümüz.</p>
+      <ul><li>Standart maliyet: 8 × 60 + 100 = 580 TL (Fiyat pazarda bulunan tedarik ürün fiyatına göre güncellenmektedir.)</li><li>Perakende fiyatı karar ekranında belirlenir</li></ul></div></article>
+  </div>
+</div></section>
+
+<section class="alt"><div class="container">
+  <div class="sec-title reveal"><h2>SmartBox Ürün Reçetesi</h2><p>Her SmartBox için aşağıdaki bileşenlerden birer adet gerekir.</p></div>
+  <div class="grid g4">
+    <div class="card reveal"><h3>⚡ Enerji Modülü</h3><p>EnerjiNova A.Ş. (G01)</p></div>
+    <div class="card reveal"><h3>🧠 İşlemci Modülü</h3><p>MikroCore Teknoloji A.Ş. (G02)</p></div>
+    <div class="card reveal"><h3>📡 Sensör Kiti</h3><p>SensoTek A.Ş. (G03)</p></div>
+    <div class="card reveal"><h3>📦 Kasa ve Ambalaj</h3><p>FormAmbalaj A.Ş. (G04)</p></div>
+    <div class="card reveal"><h3>💻 Yazılım Lisansı</h3><p>BulutOS Yazılım A.Ş. (G05)</p></div>
+    <div class="card reveal"><h3>🚚 Lojistik Tokenı</h3><p>HızlıRota Lojistik A.Ş. (G06)</p></div>
+    <div class="card reveal" style="border-color:var(--accent)"><h3>📈 Müşteri Analitiği Lisansı</h3><p>VeriPusula Analitik A.Ş. (G07) – biz</p></div>
+    <div class="card reveal"><h3>🛡️ Garanti Hizmet Paketi</h3><p>GüvencePlus Hizmetleri A.Ş. (G08)</p></div>
+  </div>
+</div></section>
+
+<!--
+<section><div class="container">
+  <div class="sec-title reveal"><h2>Stok Takibi</h2><p>SQL veritabanından okunan bileşen ve mamul stokları.</p></div>
+  <div class="grid g4" style="margin-bottom:22px">
+    <div class="card stat"><b id="ozBilesen">–</b><span>Toplam bileşen adedi</span></div>
+    <div class="card stat"><b id="ozDeger">–</b><span>Stok değeri</span></div>
+    <div class="card stat"><b id="ozKritik">–</b><span>Kritik seviyedeki kalem</span></div>
+    <div class="card stat"><b id="ozMonte">–</b><span>Monte edilebilir SmartBox (en fazla)</span></div>
+  </div>
+  <p class="status" id="stokDurum">Yükleniyor…</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Kod</th><th>Kalem</th><th>Adet</th><th>Doluluk</th><th>Değer</th><th>Durum</th></tr></thead>
+    <tbody id="stokGovde"><tr><td colspan="6">Yükleniyor…</td></tr></tbody></table></div>
+</div></section>
+
+<section class="alt"><div class="container split">
+  <div><h2 style="color:var(--primary);margin-bottom:12px">Stok Hareketi Ekle</h2>
+    <p style="color:var(--muted);margin-bottom:16px">Üretim, B2B alım-satım veya montaj sonrası stok değişimini kaydedin. Stok sıfırın altına düşemez.</p>
+    <form id="hareketForm" class="card">
+      <div><label for="hBilesen">Kalem</label><select id="hBilesen"></select></div>
+      <div class="row"><div><label for="hTur">İşlem</label><select id="hTur"><option value="giris">Giriş (+)</option><option value="cikis">Çıkış (−)</option></select></div>
+      <div><label for="hMiktar">Miktar</label><input id="hMiktar" type="number" min="1" step="1" placeholder="100" required></div></div>
+      <div><label for="hAciklama">Açıklama</label><input id="hAciklama" type="text" maxlength="120" placeholder="Örn: G08'e peşin satış"></div>
+      <button class="btn btn-solid" type="submit">Kaydet</button><p class="msg" id="hMsg" role="status"></p>
+    </form></div>
+  <div><h2 style="color:var(--primary);margin-bottom:12px">Son Hareketler</h2>
+    <div class="table-wrap"><table style="min-width:520px"><thead><tr><th>Tarih</th><th>Kalem</th><th>İşlem</th><th>Adet</th><th>Not</th></tr></thead>
+    <tbody id="hareketGovde"><tr><td colspan="5">Yükleniyor…</td></tr></tbody></table></div></div>
+</div></section>
+-->
+
+</body>
+</html>
