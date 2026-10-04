@@ -67,7 +67,7 @@
           <div><h4>VeriPusula Analitik A.Ş.</h4>
             <p>Müşteri Analitiği Lisansı üreten ve SmartBox monte eden Dijital Şirketler Ligi şirketi (G07).</p></div>
           <div><h4>Sayfalar</h4>${SAYFALAR.map(([h, a]) => `<a href="${h}">${a}</a>`).join('')}</div>
-          <div><h4>İletişim</h4><a href="mailto:info@veripusula.example">info@veripusula.example</a><a href="iletisim.html">İletişim formu</a></div>
+          <div><h4>İletişim</h4><a href="mailto:btlsarioglu54@gmail.com">btlsarioglu54@gmail.com</a><a href="iletisim.html">İletişim formu</a></div>
         </div>
         <p class="copy">© ${new Date().getFullYear()} VeriPusula Analitik A.Ş. – Dijital Şirketler Ligi simülasyon şirketi (G07). Gerçek bir ticari işletme değildir.</p>
       </div>`;
