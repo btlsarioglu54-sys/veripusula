@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       const konu = `B2B ${d.tur === 'siparis' ? 'sipariş' : 'tedarik teklifi'} – ${d.firma}`;
       const govde = `${$('sTur').selectedOptions[0].text}\nKalem: ${$('sKalem').selectedOptions[0].text}\nMiktar: ${d.miktar}\nBirim fiyat: ${tl(d.birim_fiyat)}\nÖdeme: ${$('sOdeme').selectedOptions[0].text}\nYetkili: ${d.yetkili}\nE-posta: ${d.eposta}\nNot: ${d.notu || '-'}`;
-      location.href = `mailto:info@veripusula.example?subject=${encodeURIComponent(konu)}&body=${encodeURIComponent(govde)}`;
+      location.href = `mailto:btlsarioglu54@gmail.com?subject=${encodeURIComponent(konu)}&body=${encodeURIComponent(govde)}`;
       m.className = 'msg ok'; m.textContent = 'E-posta uygulamanız açılıyor…';
     }
   });
