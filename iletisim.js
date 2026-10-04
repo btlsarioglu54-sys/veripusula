@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!r.ok) throw new Error();
       m.className = 'msg ok'; m.textContent = 'Mesajınız alındı, teşekkürler!'; f.reset();
     } catch (err) {
-      location.href = `mailto:info@veripusula.example?subject=${encodeURIComponent('Web sitesi mesajı – ' + d.ad)}&body=${encodeURIComponent(d.mesaj + '\n\n' + d.eposta)}`;
+      location.href = `mailto:btlsarioglu54@gmail.com?subject=${encodeURIComponent('Web sitesi mesajı – ' + d.ad)}&body=${encodeURIComponent(d.mesaj + '\n\n' + d.eposta)}`;
       m.className = 'msg ok'; m.textContent = 'E-posta uygulamanız açılıyor…';
     }
   });
