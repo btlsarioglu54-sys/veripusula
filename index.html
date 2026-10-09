@@ -232,6 +232,9 @@ h3.sub + .tablebox{margin-top:16px}
 @media (max-width:1100px){ .nav{gap:14px} .nav a{font-size:14px} }
 @media (max-width:980px){ .stats{grid-template-columns:repeat(3,minmax(0,1fr))} .news{grid-template-columns:repeat(2,minmax(0,1fr))} .nav{gap:0} }
 @media (max-width:600px){ .stats{grid-template-columns:repeat(2,minmax(0,1fr))} .news{grid-template-columns:minmax(0,1fr)} .stat b{font-size:26px} }
+
+.buy-cta{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:24px 0 32px}.buy-cta .hint{margin:0;font-size:.875rem;color:var(--muted,inherit);opacity:.85}
+@media (max-width:640px){.buy-cta .btn{width:100%;justify-content:center;text-align:center;white-space:normal}}
 </style>
 
 </head>
@@ -406,7 +409,7 @@ h3.sub + .tablebox{margin-top:16px}
     <p class="eyebrow">Sipariş ve tedarik formu</p>
     <h2>Sipariş özetinizi hazırlayın</h2>
     <p class="intro">Formu doldurun; tahmini tutarı hesaplayıp size talep numaralı bir sipariş özeti hazırlayalım. Özeti sistem içi kurumsal posta ile G07'ye gönderdiğinizde teklifi B2B pazarından veya Sözleşmeler bölümünden açarız. Bu form tek başına sipariş oluşturmaz ve girdiğiniz bilgileri saklamaz.</p>
-    <p class="intro"><b>Doğrudan satın almak için:</b> <a href="https://dijital-sirketler-ligi-serhat-ata.ataserhat54.chatgpt.site/ogrenci?marketCompany=G07" target="_blank" rel="noopener">Ligde sipariş ver (satın alma bağlantısı)</a>. Bağlantı lig pazarındaki ilanımıza yönlendirir; alıcı kendi şirket hesabıyla giriş yapar, işlemi yetkili müdürü tamamlar.</p>
+    <div class="buy-cta"><a class="btn solid" href="https://dijital-sirketler-ligi-serhat-ata.ataserhat54.chatgpt.site/ogrenci?marketCompany=G07" target="_blank" rel="noopener">Ligde sipariş ver (satın alma bağlantısı)</a><p class="hint">Lig pazarındaki ilanımıza yönlendirir; alıcı kendi şirket hesabıyla giriş yapar, işlemi yetkili müdürü tamamlar.</p></div>
     <div class="order">
       <form id="siparis-formu" novalidate>
         <label for="f-sirket">Şirketiniz
