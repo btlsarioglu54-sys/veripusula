@@ -235,6 +235,19 @@ h3.sub + .tablebox{margin-top:16px}
 
 .buy-cta{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:24px 0 32px}.buy-cta .hint{margin:0;font-size:.875rem;color:var(--muted,inherit);opacity:.85}
 @media (max-width:640px){.buy-cta .btn{width:100%;justify-content:center;text-align:center;white-space:normal}}
+
+/* Maliyet–fiyat–marj */
+.mfm-in{width:104px;text-align:right;padding:7px 9px;font-variant-numeric:tabular-nums}
+.mfm td.num,.mfm th.num{white-space:nowrap}
+.mfm .src{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.mfm tfoot td{font-weight:600;background:var(--bg);border-top:1px solid var(--line);border-bottom:0}
+.mfm .card dl{margin:14px 0 0;display:grid;grid-template-columns:1fr auto;gap:8px 12px;font-size:15.5px;align-items:center}
+.mfm .card dt{color:var(--muted)}
+.mfm .card dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.mfm .res{grid-column:1/-1;margin-top:6px;padding-top:12px;border-top:1px solid var(--line);font:600 22px/1.2 var(--body);text-align:left}
+.mfm .res small{display:block;font:400 13.5px var(--body);color:var(--muted);margin-top:2px}
+.mfm .res.neg{color:var(--danger)}
+@media (max-width:980px){.mfm .g3{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 </head>
@@ -250,6 +263,7 @@ h3.sub + .tablebox{margin-top:16px}
       <a href="#hakkimizda">Hakkımızda</a>
       <a href="#urunler">Ürünler</a>
       <a href="#fiyat">Fiyatlar</a>
+      <a href="#maliyet">Maliyet</a>
       <a href="#uretim">Üretim</a>
       <a href="#departmanlar">Departmanlar</a>
       <a href="#haberler">Haberler</a>
@@ -360,11 +374,10 @@ h3.sub + .tablebox{margin-top:16px}
     <p class="eyebrow">B2B katalog ve fiyat listesi</p>
     <h2>Fiyatlar ve koşullar</h2>
     <p class="intro">Son güncelleme: 9 Ekim 2026 · Tur 3. Fiyatlar lig pazarının günlük fiyat bandına göre güncellenir; geçerli fiyat, pazar ilanındaki veya sözleşmedeki fiyattır.</p>
-    html
-<div style="margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--tint);color:var(--ink);border-radius:10px;line-height:1.6">
+    <div style="margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--tint);color:var(--ink);border-radius:10px;line-height:1.6">
   <strong>Tur 3 güncel durum · 9 Ekim 2026</strong><br>
-  Müşteri Analitiği Lisansı: <b>71 TL</b> (pazar ilanı #68), peşin ödemede onaydan sonra aynı gün teslim. Güncel stok: <b>[X] adet</b>.<br>
-  SmartBox: montaj sonrası satışa açılacak. Hedef fiyat <b>[4.500] TL</b>, ilk partinin teslimi bileşen tedarikine bağlıdır.<br>
+  Müşteri Analitiği Lisansı: <b>71 TL</b> (pazar ilanı #68), peşin ödemede onaydan sonra aynı gün teslim. Güncel stok: <b>200 adet</b>.<br>
+  SmartBox: montaj sonrası satışa açılacak. Hedef fiyat <b>1.150 TL</b>, ilk partinin teslimi bileşen tedarikine bağlıdır.<br>
   Ödeme: peşin, takas veya vadeli. İletişim: G07 kurumsal posta, yanıt süresi 6 saat.
 </div>
     <h3 class="sub">Müşteri Analitiği Lisansı</h3>
@@ -384,7 +397,7 @@ h3.sub + .tablebox{margin-top:16px}
       <table>
         <thead><tr><th>Pazar</th><th>Açıklama</th><th class="num">Parti</th><th class="num">Liste fiyatı</th></tr></thead>
         <tbody>
-          <tr><td>Yurt içi pazar ilanı</td><td>Şirketlere ve kurumsal alıcılara toptan satış, peşin</td><td class="num">Montaj sonrası satışa açılacak</td><td class="num price">[1.150] TL (hedef)/td></tr>
+          <tr><td>Yurt içi pazar ilanı</td><td>Şirketlere ve kurumsal alıcılara toptan satış, peşin</td><td class="num">Montaj sonrası satışa açılacak</td><td class="num price">1.150 TL (hedef)</td></tr>
           <tr><td>İhracat ilanı</td><td>EUR üzerinden peşin satış; sevkiyat anlaşmalı nakliye firmasıyla</td><td class="num">20 adet / sevkiyat</td><td class="num price">Teklif üzerine (EUR)</td></tr>
           <tr><td>Perakende</td><td>Tur sonunda nihai tüketiciye satış. Fiyat her turun kararıyla açıklanır; Tur 3 perakende fiyatı lig referansına yakın belirlenir.</td><td class="num">–</td><td class="num price">Tur kararıyla</td></tr>
         </tbody>
@@ -399,6 +412,72 @@ h3.sub + .tablebox{margin-top:16px}
       <li><b>Yanıt süresi</b>Kurumsal postalara 6 saat içinde yanıt veririz. 23.59–07.59 arasında gelen postalar sabah yanıtlanır.</li>
     </ul>
   </div>
+</section>
+
+<section class="sec alt mfm" id="maliyet">
+  <div class="wrap">
+    <p class="eyebrow">Maliyet, fiyat ve marj</p>
+    <h2>Bir SmartBox'ın maliyeti ve marjı</h2>
+    <p class="intro">Bir SmartBox sekiz bileşenden, montaj işçiliğinden ve sevkiyattan oluşur. Aşağıda birim maliyeti ve üç satış fiyatında kalan marjı görebilirsiniz. Kutulardaki tutarı değiştirirseniz sonuçlar anında güncellenir.</p>
+    <div class="tablebox">
+      <table>
+        <caption style="position:absolute;left:-9999px">SmartBox birim maliyet tablosu</caption>
+        <thead><tr><th>Kalem</th><th>Tedarikçi</th><th class="num">Maliyet (TL)</th></tr></thead>
+        <tbody id="mfm-rows"></tbody>
+        <tfoot><tr><td colspan="2">Birim maliyet (SmartBox başına)</td><td class="num" id="mfm-total">–</td></tr></tfoot>
+      </table>
+    </div>
+    <h3 class="sub" style="margin-top:36px">Üç fiyat senaryosu</h3>
+    <div class="grid g3" id="mfm-sc" style="margin-top:16px"></div>
+    <p class="note">"Kayıt" yazan tutarlar şirket defterindeki işlemlerden, "varsayım" yazanlar tahminden gelir. Sevkiyat, 20 adetlik bir ihracat partisinin nakliye bedelinin SmartBox sayısına bölünmesiyle bulunur. Marj = satış fiyatı − birim maliyet. Güncelleme: 16 Ekim 2026.</p>
+  </div>
+  <script>
+  (function(){
+    var items=[
+      {n:'Enerji Modülü',s:'EnerjiNova A.Ş. (G01)',p:100,t:'v'},
+      {n:'İşlemci Modülü',s:'MikroCore Teknoloji A.Ş. (G02)',p:60,t:'k'},
+      {n:'Sensör Kiti',s:'SensoTek A.Ş. (G03)',p:100,t:'v'},
+      {n:'Kasa ve Ambalaj',s:'FormAmbalaj A.Ş. (G04)',p:80,t:'v'},
+      {n:'Yazılım Lisansı',s:'BulutOS Yazılım A.Ş. (G05)',p:120,t:'k'},
+      {n:'Lojistik Tokenı',s:'HızlıRota Lojistik A.Ş. (G06)',p:60,t:'k'},
+      {n:'Müşteri Analitiği Lisansı',s:'VeriPusula (G07, kendi üretimimiz)',p:60,t:'k'},
+      {n:'Garanti Hizmet Paketi',s:'GüvencePlus Hizmetleri A.Ş. (G08)',p:90,t:'v'},
+      {n:'Montaj işçiliği',s:'Kendi montaj hattımız',p:120,t:'v'},
+      {n:'Sevkiyat (parti bedeli ÷ 20 adet)',s:'Alyatransport A.Ş.',p:600,t:'v',div:20}
+    ];
+    var scen=[{n:'Rekabetçi',d:'Lig referans fiyatına yakın',p:900},{n:'Hedef',d:'Yurt içi liste fiyatı',p:1150},{n:'Premium',d:'Yüksek marj hedefi',p:1300}];
+    var rows=document.getElementById('mfm-rows'),tot=document.getElementById('mfm-total'),sc=document.getElementById('mfm-sc');
+    function fmt(x){return x.toLocaleString('tr-TR',{maximumFractionDigits:0})+' TL';}
+    items.forEach(function(it,i){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>'+it.n+'<span class="src">'+(it.t==='k'?'kayıt':'varsayım')+(it.div?' · parti bedeli girilir':'')+'</span></td><td>'+it.s+'</td><td class="num"><input class="mfm-in" type="number" min="0" step="1" inputmode="numeric" aria-label="'+it.n+' maliyeti (TL)" value="'+it.p+'" data-i="'+i+'"></td>';
+      rows.appendChild(tr);
+    });
+    scen.forEach(function(s){
+      var c=document.createElement('div');c.className='card';
+      c.innerHTML='<span class="tag">'+s.n+'</span><h3>'+s.d+'</h3><dl><dt>Satış fiyatı (TL)</dt><dd><input class="mfm-in" type="number" min="0" step="10" inputmode="numeric" aria-label="'+s.n+' satış fiyatı (TL)" value="'+s.p+'"></dd><dt>Birim maliyet</dt><dd data-c></dd><dt>Marj oranı</dt><dd data-r></dd><dd class="res" data-m></dd></dl>';
+      sc.appendChild(c);
+    });
+    function calc(){
+      var sum=0;
+      rows.querySelectorAll('input').forEach(function(inp){
+        var it=items[+inp.dataset.i],v=Math.max(0,+inp.value||0);
+        sum+=it.div?v/it.div:v;
+      });
+      tot.textContent=fmt(sum);
+      sc.querySelectorAll('.card').forEach(function(c){
+        var price=Math.max(0,+c.querySelector('input').value||0),m=price-sum,r=price?m/price*100:0;
+        c.querySelector('[data-c]').textContent=fmt(sum);
+        c.querySelector('[data-r]').textContent='%'+r.toFixed(1).replace('.',',');
+        var e=c.querySelector('[data-m]');
+        e.innerHTML=fmt(m)+'<small>SmartBox başına marj</small>';
+        e.className='res'+(m<0?' neg':'');
+      });
+    }
+    document.getElementById('maliyet').addEventListener('input',calc);
+    calc();
+  })();
+  </script>
 </section>
 
 <section class="sec alt" id="surec">
